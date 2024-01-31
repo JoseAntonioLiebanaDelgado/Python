@@ -1,0 +1,17 @@
+# Ejercicio 1
+
+cuota_fija = 6.0
+precio_bajo = 0.1
+precio_alto = 0.3
+
+litros_consumidos = float(input("Ingrese la cantidad de litros de agua consumidos: "))
+
+if litros_consumidos < 50:
+    importe_factura = cuota_fija
+else:
+    if litros_consumidos <= 200:
+        importe_factura = cuota_fija + (litros_consumidos - 50) * precio_bajo
+    else:
+        importe_factura = cuota_fija + (150 * precio_bajo) + ((litros_consumidos - 200) * precio_alto)
+
+print(f"El importe de su factura de agua es de {importe_factura:.2f} €.")
